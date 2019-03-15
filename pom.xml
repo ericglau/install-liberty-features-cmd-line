@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.openliberty</groupId>
+    <artifactId>liberty-maven-plugin-runner</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <properties> 
+       <liberty.directory>target/liberty/wlp</liberty.directory> 
+    </properties> 
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.wasdev.wlp.maven.plugins</groupId>
+                <artifactId>liberty-maven-plugin</artifactId>
+                <configuration>
+                    <installDirectory>${liberty.directory}</installDirectory>
+                    <features>
+                        <feature>${liberty.feature}</feature>
+                    </features>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
