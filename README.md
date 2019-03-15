@@ -14,25 +14,45 @@ mvn net.wasdev.wlp.maven.plugins:liberty-maven-plugin:install-feature -Dliberty.
 1. Modify the pom.xml to add dependencies, e.g.:
 #### Open Liberty:
 ```
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.openliberty.features</groupId>
+                <artifactId>features-bom</artifactId>
+                <version>19.0.0.2</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
         <dependency>
             <groupId>io.openliberty.features</groupId>
-            <artifactId>servlet-4.0</artifactId>
-            <version>19.0.0.2</version>
+            <artifactId>jaxrs-2.1</artifactId>
             <type>esa</type>
-            <scope>provided</scope>
-        </dependency>   
+        </dependency>
     </dependencies>
 ```
 #### WebSphere Liberty:
 ``` 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.ibm.websphere.appserver.features</groupId>
+                <artifactId>features-bom</artifactId>
+                <version>19.0.0.2</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
        <dependency>
            <groupId>com.ibm.websphere.appserver.features</groupId>
            <artifactId>servlet-3.0</artifactId>
-           <version>19.0.0.2</version>
            <type>esa</type>
-           <scope>provided</scope>
        </dependency>
     </dependencies>
 ```
