@@ -9,6 +9,7 @@
        <liberty.directory>target/liberty/wlp</liberty.directory> 
     </properties> 
 
+
     <build>
         <plugins>
             <plugin>
@@ -18,7 +19,8 @@
                     <installDirectory>${liberty.directory}</installDirectory>
                     <features>
                         <feature>${liberty.feature}</feature>
-                    </features>
+                        <acceptLicense>${liberty.feature.acceptLicense}</acceptLicense>
+                    </features>                    
                 </configuration>
             </plugin>
         </plugins>
