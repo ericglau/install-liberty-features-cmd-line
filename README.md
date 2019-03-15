@@ -12,7 +12,7 @@ mvn net.wasdev.wlp.maven.plugins:liberty-maven-plugin:install-feature -Dliberty.
 
 ## Installing features using dependencies
 1. Modify the pom.xml to add dependencies, e.g.:
-### Open Liberty:
+#### Open Liberty:
 ```
     <dependencies>
         <dependency>
@@ -24,7 +24,7 @@ mvn net.wasdev.wlp.maven.plugins:liberty-maven-plugin:install-feature -Dliberty.
         </dependency>   
     </dependencies>
 ```
-### WebSphere Liberty:
+#### WebSphere Liberty:
 ``` 
     <dependencies>
        <dependency>
