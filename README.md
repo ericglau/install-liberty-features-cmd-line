@@ -1,15 +1,16 @@
 # Installing Liberty features from command line
 
-Setup:
+## Setup
+1. Have an existing Liberty directory.
 1. Clone this repo or download `pom.xml` to any directory.
 
-Installing features using feature names:
+## Installing features using feature names
 1. From the directory with the `pom.xml`, run the following command, replacing the values of `-Dliberty.directory` and `-Dliberty.feature` with your existing Liberty directory and the feature you want to install, respectively.
 ```
 mvn net.wasdev.wlp.maven.plugins:liberty-maven-plugin:install-feature -Dliberty.directory=/opt/wlp -Dliberty.feature=jaxrs-2.1
 ```
 
-Installing features using dependencies:
+## Installing features using dependencies
 1. Modify the pom.xml to add dependencies, e.g.:
 Open Liberty:
 ```
