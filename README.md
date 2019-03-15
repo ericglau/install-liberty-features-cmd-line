@@ -39,6 +39,7 @@ mvn net.wasdev.wlp.maven.plugins:liberty-maven-plugin:install-feature -Dliberty.
 2. From the directory with the `pom.xml`, run the following command, replacing the values of `-Dliberty.directory` with your existing Liberty directory.
 
 ## Installing user features
+1. From the directory with the `pom.xml`, run the following command, replacing the values of `-Dliberty.directory` and `-Dliberty.feature` with your existing Liberty directory and the path to the user feature you want to install, respectively.
 ```
-mvn net.wasdev.wlp.maven.plugins:liberty-maven-plugin:install-feature -Dliberty.directory=/Users/eric/Downloads/wlp -Dliberty.feature="/Users/eric/maven/com.ibm.websphere.appserver.portlet-2.0.esa" -Dliberty.feature.acceptLicense=true
+mvn net.wasdev.wlp.maven.plugins:liberty-maven-plugin:install-feature -Dliberty.directory=/opt/wlp -Dliberty.feature="/mydir/com.ibm.websphere.appserver.portlet-2.0.esa" -Dliberty.feature.acceptLicense=true
 ```
